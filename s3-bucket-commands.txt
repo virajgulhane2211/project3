@@ -1,0 +1,25 @@
+aws --version
+aws configure
+aws configure --profile another-account
+
+
+#s3 bucket#
+-creating bucket
+aws s3 mb s3://tgsbucket --region us-west-2
+
+-s3 listing command
+aws s3 ls
+aws s3 ls s3://tgsbucket
+aws s3 ls s3://tgsbucket --recursive
+aws s3 ls s3://tgsbucket --recursive --human-readable --summarize
+
+-backup
+aws s3 sync backup s3://tgsbucket
+aws s3 sync s3://tgsbucket backup
+
+-removing bucket
+aws s3 rb s3://tgsbucket
+
+
+
+
